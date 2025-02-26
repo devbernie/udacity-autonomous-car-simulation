@@ -1,3 +1,4 @@
+(English below)
 ### **Giới thiệu dự án: Udacity Autonomous Car Simulation**
 
 Dự án **Udacity Autonomous Car Simulation** được xây dựng để mô phỏng và điều khiển xe tự lái trong môi trường giả lập của Udacity. Dự án này sử dụng **mạng nơ-ron tích chập (CNN)** để nhận diện và dự đoán góc lái từ hình ảnh camera của xe trong môi trường mô phỏng.
