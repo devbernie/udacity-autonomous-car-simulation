@@ -81,3 +81,89 @@ Mô hình sẽ bắt đầu điều khiển xe tự động trên simulator.
 ### **Tóm tắt**
 
 Dự án **Udacity Autonomous Car Simulation** sử dụng **mô hình CNN** để huấn luyện xe tự lái trong môi trường giả lập. Người dùng có thể tải xuống phần mềm mô phỏng từ Udacity, đặt vào thư mục dự án, sau đó khởi chạy xe với **Python**. Dự án áp dụng **Deep Learning** để xử lý ảnh và điều khiển xe theo thời gian thực.
+
+
+
+### **Introduction to the Udacity Autonomous Car Simulation Project**
+
+The **Udacity Autonomous Car Simulation** project is designed to simulate and control a self-driving car in Udacity's simulation environment. This project uses a **Convolutional Neural Network (CNN)** to recognize and predict steering angles from the car's camera images in the simulated environment.
+
+The project runs on the **Udacity Self-Driving Car Simulator** and is implemented in Python, leveraging libraries such as **Keras, TensorFlow, OpenCV, and NumPy** for data processing and model training.
+
+* * * * *
+
+### **Source Code Analysis in `bright_Untitled6.ipynb`**
+
+The notebook contains the following key steps:
+
+1.  **Data Loading & Preprocessing**
+
+    -   Reads data from the `driving_log.csv` file, which includes image paths, steering angles, and speed information.
+    -   Preprocesses images by cropping unnecessary parts, converting them to grayscale, and normalizing the data.
+2.  **Building the Convolutional Neural Network (CNN) Model**
+
+    -   Based on **NVIDIA's End-to-End Learning for Self-Driving Cars** architecture.
+    -   The model consists of multiple **Convolutional, MaxPooling, and Fully Connected layers**.
+    -   Uses **ReLU activation function** and applies Dropout to reduce overfitting.
+3.  **Training the Model**
+
+    -   Splits data into training and validation sets.
+    -   Uses **Adam Optimizer** with `Mean Squared Error (MSE)` as the loss function.
+    -   Saves the trained model.
+4.  **Prediction & Autonomous Driving**
+
+    -   The trained model predicts the steering angle from real-time camera images.
+    -   Connects with the simulator through `drive.py` to control the car autonomously.
+
+* * * * *
+
+### **How to Use**
+
+To run the project, follow these steps:
+
+#### **1\. Clone the Repository**
+
+Open a terminal or command prompt and run:
+
+```
+git clone https://github.com/devbernie/udacity-autonomous-car-simulation.git
+cd udacity-autonomous-car-simulation
+
+```
+
+#### **2\. Download the Udacity Self-Driving Car Simulator**
+
+Download the simulator from the official Udacity repository:
+
+```
+git clone https://github.com/udacity/self-driving-car-sim.git
+
+```
+
+After downloading, move the `self-driving-car-sim` folder into the cloned project directory.
+
+#### **3\. Install Required Libraries**
+
+Run the following command to install the necessary dependencies:
+
+```
+pip install tensorflow keras numpy opencv-python pandas flask socketio eventlet
+
+```
+
+#### **4\. Start the Simulation**
+
+Launch the Udacity simulator and select **"Autonomous Mode"**, then run:
+
+```
+python drive.py
+
+```
+
+The trained model will start controlling the car in real-time within the simulator.
+
+* * * * *
+
+### **Summary**
+
+The **Udacity Autonomous Car Simulation** project utilizes **a CNN model** to train and operate a self-driving car within a simulated environment. Users can download the Udacity simulator, place it in the project directory, and run the car using **Python**. This project applies **Deep Learning** techniques for real-time image processing and autonomous vehicle control.
